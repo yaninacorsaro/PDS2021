@@ -31,19 +31,20 @@ xfangle=np.angle(XX)
 
 # grafico módulo de la dft
 fig, (ax, ax1) = plt.subplots(1, 2)
-ax.plot(frq, xfabs, "-", frq, fftabs, ":")
-ax.set(xlabel='frecuencia', ylabel='módulo',title='DFT módulo')
+ax.stem(frq, xfangle, use_line_collection = True)
+ax.set(xlabel='frecuencia', ylabel='fase',title='DFT fase')
 ax.grid()
 plt.show()
 
-ax1.plot(frq, xfangle, "-", frq, fftangle, ":")
-ax1.set(xlabel='frecuencia', ylabel='fase',title='DFT fase')
+ax1.stem( frq, fftangle, use_line_collection = True)
+
+ax1.set(xlabel='frecuencia', ylabel='fase',title='fft fase')
 ax1.grid()
 plt.show()
 
 fig, ax = plt.subplots()
-ax.plot(tt, y)
-ax.set(xlabel='tiempo (segundos)', ylabel='amplitud (V)',title='señal: senoidal')
+ax.plot(frq, xfabs)
+ax.set(xlabel='tiempo (segundos)', ylabel='amplitud (V)',title='modulo')
 ax.grid()
 plt.show()
 

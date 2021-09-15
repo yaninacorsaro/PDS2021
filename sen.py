@@ -15,7 +15,7 @@ def mi_funcion_sawtooth( vmax , dc , ff , ph, nn , fs ):
     xx = vmax*sp.sawtooth(tt*2*np.pi*ff+ph) + dc
     return tt, xx
 
-
+'''
 # test
 tt, xx = mi_funcion_sen( vmax = 2 , dc = 0 , ff = 1 , ph = 0, nn = 1000 , fs=100 )
 fig, ax = plt.subplots()
@@ -31,3 +31,4 @@ ax.plot(tt, xx)
 ax.set(xlabel='time (s)', ylabel='voltage (V)',title='sawtooth function')
 ax.grid()
 plt.show()
+'''

@@ -37,18 +37,16 @@ xfangle=np.angle(XX)
 
 # grafico módulo de la dft, de mi función en rayitas y de la fft punteada
 fig, ax = plt.subplots()
-ax.plot(frq, xfabs, "-", frq, fftabs, ":")
+ax.plot(frq, xfabs, "-", frq, fftabs, "o")
 ax.set(xlabel='frecuencia', ylabel='módulo',title='DFT módulo')
 ax.grid()
 plt.show()
 
 # grafico fase de la dft, de mi función en rayitas y de la fft punteada
 fig, ax1 = plt.subplots()
-ax1.plot(frq, xfangle, "-", frq, fftangle, ":")
+ax1.plot(frq, xfangle, "-", frq, fftangle, "o")
 ax1.set(xlabel='frecuencia', ylabel='fase',title='DFT fase')
 ax1.grid()
-plt.xlim(0, 100)
-plt.ylim(-5, 5)
 plt.show()
 
 # grafico la señal senoidal que fue analizada
